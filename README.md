@@ -1,11 +1,5 @@
 # communication
-我修改了一下
-
-我在master 默认主分支上
-那我再主分支上删除咯
-
-vsddsdsv
-## 那我再主分支上删除咯
+我是在主分支
 
 ## Project setup
 ```

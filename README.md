@@ -4,6 +4,8 @@
 
 博米特垃圾
 任攀垃圾
+任攀垃圾
+任攀垃圾
 ## Project setup
 ```
 yarn install

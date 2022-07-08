@@ -1,9 +1,9 @@
 <template>
   <el-container>
     <el-aside width="200px">
-      <router-link to="/navmenu">navmenu</router-link>
-      <router-link to="/tabs">tabs</router-link>
-      <router-link to="/breadcrumb">breadcrumb</router-link>
+      <router-link to="/navmenu" @click.native="add()">navmenu</router-link>
+      <router-link to="/tabs" @click.native="add()">tabs</router-link>
+      <router-link to="/breadcrumb" @click.native="add()">breadcrumb</router-link>
     </el-aside>
     <el-container>   
       <el-main>
@@ -21,6 +21,13 @@ export default {
   name: "Home",
   components: {
     HelloWorld
+  },
+  methods:{
+    add(){
+      // console.log(this.$route.path);
+      // console.log(this.$store.state);
+      this.$store.commit("addCrumb",this.$route.path)
+    }
   }
 };
 </script>

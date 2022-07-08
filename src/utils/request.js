@@ -1,6 +1,6 @@
-import instance from '../https';
+import instance from './https';
 
-function getCity(){
+export function getCity(){
     return instance({
         url: '/api/address/list',
         method: 'get',
@@ -8,7 +8,6 @@ function getCity(){
             app_id:"jqoeser1qeeekahq",
             app_secret:"cGtsdUUzVDNzMkw0S2ViZUFSWkNsdz09"
           },
-    })
+    }).then((res)=>{res})
 }
 
-export default {getCity};

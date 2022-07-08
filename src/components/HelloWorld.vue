@@ -1,8 +1,5 @@
 <template>
   <div class="hello">
-
-
-
     <el-row>
       <el-descriptions title="垂直带边框列表" direction="vertical" :column="4" border>
         <el-descriptions-item label="用户名">{{username}}</el-descriptions-item>
@@ -13,28 +10,33 @@
         </el-descriptions-item>
         <el-descriptions-item label="联系地址">{{address}}</el-descriptions-item>
       </el-descriptions>
-      
-      <el-button type="primary" class="gap">主要按钮</el-button>
+
+      <el-button type="primary" class="gap" @click="getCity">主要按钮</el-button>
     </el-row>
   </div>
 </template>
 
 <script>
-
+import { getCity } from "../utils/request";
 export default {
   name: "HelloWorld",
   props: {
     msg: String
   },
-  data:{
-    username:"",
-    phoneNumber:"",
-    city:"",
-    school:"",
-    address:""
+  data() {
+    return {
+      username: "",
+      phoneNumber: "",
+      city: "",
+      school: "",
+      address: ""
+    };
   },
-  methods:{
-
+  methods: {
+    getCity(){
+      console.log(getCity());
+      return getCity()
+    }
   }
 };
 </script>

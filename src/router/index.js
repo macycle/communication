@@ -8,7 +8,21 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    children: [
+      {
+        path: '/navmenu',
+        component: () => import('../components/navmenu.vue')
+      },
+      {
+        path: '/tabs',
+        component: () => import('../components/tabs.vue')
+      },
+      {
+        path: '/breadcrumb',
+        component: () => import('../components/breadcrumb.vue')
+      }
+    ]
   }
 ]
 
